@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: eureka-server
+
+  zipkin:
+    base-url: ${ZIPKIN_URI:http://localhost:9411/}
+  sleuth:
+    sampler:
+      probability: 1
+
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+logging:
+  file: "logs/eureka-server.log"
+  level:
+    root: INFO

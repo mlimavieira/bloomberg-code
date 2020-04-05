@@ -1,0 +1,43 @@
+server:
+  port: 9000
+  servlet:
+    context-path: "/"
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+spring:
+  application:
+    name: client-calculator
+  cache:
+    cache-names:
+      - operations
+    caffeine:
+      spec: "maximumSize=1000,expireAfterAccess=10s"
+
+  zipkin:
+    base-url: ${ZIPKIN_URI:http://localhost:9411/}
+  sleuth:
+    sampler:
+      probability: 1
+
+logging:
+  file: "logs/client-calculator.log"
+  level:
+    root: INFO
+
+
+operation:
+  cache:
+    ttl-in-seconds: 10

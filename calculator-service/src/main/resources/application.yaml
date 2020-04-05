@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: calculator-service-core
+  zipkin:
+    base-url: ${ZIPKIN_URI:http://localhost:9411/}
+  sleuth:
+    sampler:
+      probability: 1
+
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
+logging:
+  file: "logs/calculator-service-core.log"
+  level:
+    root: INFO
