@@ -15,7 +15,7 @@ The application take around 2 minutes to start all the dependencies.
 ### Client Swagger 
 [http://localhost:9000/swagger-ui.html]()
 
-![](assets/Calculator Cient Swagger.png)
+![](assets/CalculatorCientSwagger.png)
 
 ### Eureka
 [http://localhost:8761/]()
@@ -25,7 +25,7 @@ The application take around 2 minutes to start all the dependencies.
 ### Zipkin
 [http://localhost:9411/zipkin/]()
 
-![](assets/Zipkin dashboard.png)
+![](assets/ZipkinDashboard.png)
 
 
 ### Calculator Client 
